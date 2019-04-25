@@ -1,0 +1,27 @@
+{
+  "name": "jr-hash",
+  "version": "0.1.0",
+  "description": "A simple JavaScript implementation of Ruby's Hash class ",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha spec.js",
+    "test:w": "mocha -w index.js spec.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/skuester/jr-hash.git"
+  },
+  "keywords": [
+    "ruby",
+    "hash"
+  ],
+  "author": "shout@shanekuester.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/skuester/jr-hash/issues"
+  },
+  "homepage": "https://github.com/skuester/jr-hash#readme",
+  "devDependencies": {
+    "mocha": "^6.1.4"
+  }
+}

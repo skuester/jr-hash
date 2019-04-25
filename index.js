@@ -31,12 +31,12 @@ class Hash {
 
 	valueOf() {
 		return this.state
-    }
+	}
 
-    
-    toJSON() {
-        return this.state
-    }
+
+	toJSON() {
+		return this.state
+	}
 
 }
 

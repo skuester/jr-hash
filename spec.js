@@ -7,30 +7,31 @@ describe ("Hash", function () {
 	it ("provides a ruby-like interface for an object", function () {
 		let hash = new Hash()
 
-        assert.equal( hash.get('an index'), undefined )
+		assert.equal( hash.get('an index'), undefined )
 
 		hash.set('an index', 'a value')
 
 		assert.equal( hash.get('an index'), 'a value' )
-    })
-    
+	})
 
-    it ("serializes into JSON correctly", function () {
-        let hash = new Hash()
 
-        hash.set('foo', 'bar')
-        hash.set('baz', 'buz')
+	it ("serializes into JSON correctly", function () {
+		let hash = new Hash()
 
-        assert.deepEqual( JSON.stringify(hash), JSON.stringify({ foo: 'bar', baz: 'buz' }) )
-    })
+		hash.set('foo', 'bar')
+		hash.set('baz', 'buz')
+
+		assert.deepEqual( JSON.stringify(hash), JSON.stringify({ foo: 'bar', baz: 'buz' }) )
+	})
 
 
 	describe ("keys()", function () {
+
 		it ("returns a list of keys created", function () {
 			let hash = new Hash()
 
-            assert.equal( hash.get('foo'), undefined )
-            
+			assert.equal( hash.get('foo'), undefined )
+
 			assert.deepEqual( hash.keys(), [] )
 
 			hash.set('foo')
@@ -39,6 +40,7 @@ describe ("Hash", function () {
 	})
 
 	describe("values()", function () {
+
 		it("returns a list of values created", function () {
 			let hash = new Hash()
 
@@ -46,8 +48,8 @@ describe ("Hash", function () {
 
 			hash.set('one', 'a')
 			hash.set('one', 'a')
-            assert.deepEqual( hash.values(), ['a'] )
-            
+			assert.deepEqual( hash.values(), ['a'] )
+
 			hash.set('two', 'b')
 			assert.deepEqual( hash.values(), ['a', 'b'] )
 		})
@@ -55,6 +57,7 @@ describe ("Hash", function () {
 
 
 	describe ("valueOf() support", function () {
+
 		it ("returns its state object", function () {
 			let hash = new Hash()
 
@@ -116,23 +119,19 @@ describe ("Hash", function () {
 
 
 	it ("EXAMPLE: is an easy way to initialize dictionaries", function () {
-        let hash = new Hash((hash, key) => hash[key] = { name: key, items: [] })
-        
-        hash.get('example').items.push('a')
-        
+		let hash = new Hash((hash, key) => hash[key] = { name: key, items: [] })
+
+		hash.get('example').items.push('a')
+
 		assert.deepEqual( hash.get('example'), { name: 'example', items: ['a'] } )
 	})
 
 
 	it("EXAMPLE: can make powerful use of the missing key", function () {
-        let times_two = new Hash((hash, key) => hash[key] = key * 2 )
-        
+		let times_two = new Hash((hash, key) => hash[key] = key * 2 )
+
 		assert.equal( times_two.get(2), 4 )
-    })
-    
+	})
 
-  
-
-    
 
 })

@@ -2,7 +2,9 @@
 
 ## Installation
 
-> npm install --save jr-hash
+```
+npm install --save jr-hash
+```
 
 ## Reason for Existing
 
@@ -60,7 +62,6 @@ Now, did we save the world? No. But it makes me happier. So that's why I made th
 ## Where are the docs?
 
 You can find everything you need in the `./spec.js` file. :)
-
 
 
 ## ISC License (ISC)

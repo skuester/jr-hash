@@ -57,6 +57,11 @@ function record_hero(hero, hero_lists_by_type) {
 Now, did we save the world? No. But it makes me happier. So that's why I made this. Thanks, Ruby.
 
 
+## Where are the docs?
+
+You can find everything you need in the `./spec.js` file. :)
+
+
 
 ## ISC License (ISC)
 Copyright 2019 Shane Kuester
